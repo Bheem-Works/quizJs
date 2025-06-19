@@ -7,7 +7,7 @@ const options = document.querySelector("options");
 // You have to create a buttons with your self. hehe; 
 
 
-// Let's makes some questions through the arrays. 
+// Let's makes some questions through the arrays. ;
 const questionBank = [
   {questions:"What is the color of the sky?",
   questionsOption : ["sky","blue","yaamamoor"],
@@ -25,3 +25,9 @@ const questionBank = [
   }
 ]
 
+// Questions Count;
+const questionText = document.createElement('p');
+questionText.textContent = `Questions`; // Use the templete String to get the question numbers value; 
+questionText.style.color = "white";
+questionText.style.fontSize = "20px";
+questionsCounter.appendChild(questionText);
