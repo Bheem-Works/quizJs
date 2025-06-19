@@ -3,7 +3,7 @@
 
 const questionsCounter = document.querySelector(".questionCounter");
 const questions = document.querySelector(".questions");
-const options = document.querySelector("options");
+const options = document.querySelector(".options");
 // You have to create a buttons with your self. hehe; 
 
 
@@ -25,27 +25,31 @@ const questionBank = [
   }
 ]
 
+// creating a chaning input varaibles for store the score and the currentQuestions; 
+let currentQuestions = 0; 
+let score = 0; 
+
 // Questions Count;
 const questionText = document.createElement('p');
-questionText.textContent = `Questions`; // Use the templete String to get the question numbers value; 
+questionText.textContent = `Questions:${score}`; // Use the templete String to get the question numbers value; 
 questionText.style.color = "white";
 questionText.style.fontSize = "20px";
 questionsCounter.appendChild(questionText);
 
 
 // Displaying the questions Bank to the questions varaibles
-let list = document.createElement("p");
-const mapingQuestions = questionBank.map((item,idx)=>{
-  // Storing the item to the varaibles; 
-  const storeItem = item; 
-  list = storeItem; 
-  // append it to the questions; 
-  console.log(list);
-  console.log(idx);
-})
+// by using the functions of const showOutput; 
 
-// test is it working or not? 
-const test_list = document.createElement("li");
-test_list.innerText = "This is the vim list";
-questions.appendChild(test_list);
-console.log("OutSideOfTheMap:",list);
+function showQuestions() {
+  const questionsShow = questionBank[currentQuestions];
+  questions.innerText = questionsShow.questions;
+  // options.innerHTML = " ";
+
+  questionsShow.questionsOption.forEach(option=> {
+    const buttonElement = document.createElement("button");
+    buttonElement.innerText = option;
+   options.appendChild(buttonElement);
+    // buttonElement.addEventListener("click",selectOptions);
+  })
+}
+showQuestions();
