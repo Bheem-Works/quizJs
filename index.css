@@ -1,0 +1,50 @@
+body{
+  background-color: purple;
+  padding:0px;
+  color:white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: monospace;
+}
+
+/* quiz css */ 
+.containerQuiz{
+  align-items: center;
+  text-align: center;
+  width: 500px;
+  min-height: 100vh;
+  padding:20px;
+  margin:10px;
+}
+
+/* questions Sections*/
+.questionCounter{
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size:20px;
+}
+
+.questions p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+/* options sections */
+.options{
+  margin: 10px;
+  text-align: center;
+}
+
+/* waiting for the class of the options */;
+
+/* buttons groups */
+.buttonGroup{
+  display:flex;
+  cursor:pointer;
+  justify-content:space-between;
+}
+
