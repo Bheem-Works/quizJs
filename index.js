@@ -31,3 +31,21 @@ questionText.textContent = `Questions`; // Use the templete String to get the qu
 questionText.style.color = "white";
 questionText.style.fontSize = "20px";
 questionsCounter.appendChild(questionText);
+
+
+// Displaying the questions Bank to the questions varaibles
+let list = document.createElement("p");
+const mapingQuestions = questionBank.map((item,idx)=>{
+  // Storing the item to the varaibles; 
+  const storeItem = item; 
+  list = storeItem; 
+  // append it to the questions; 
+  console.log(list);
+  console.log(idx);
+})
+
+// test is it working or not? 
+const test_list = document.createElement("li");
+test_list.innerText = "This is the vim list";
+questions.appendChild(test_list);
+console.log("OutSideOfTheMap:",list);
