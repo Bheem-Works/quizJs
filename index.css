@@ -63,3 +63,12 @@ body{
 .selectButton:active{
   background-color: green;
 }
+
+/* audio sections */
+
+audio::-webkit-media-controls {
+  display: block !important;
+}
+audio {
+  display: none; /* Audio element stays invisible */
+}

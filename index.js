@@ -71,6 +71,7 @@ function selectOptions(e) {
   }
 }
 
+// Importing the audio. 
 function showResult() {
   questions.innerHTML = "";
   options.innerHTML = "";
@@ -80,5 +81,9 @@ function showResult() {
     <p>You score : ${score}/${questionBank.length} </p>
     <p>Bye! Sayanaro </p>`;
 finalResult.appendChild(result);
+  const audio = document.getElementById("bye");
+  // Have to fix this , I have to render it to the screen; 
+  audio.style.display = audio.style.display === "none" ? "block" : "none";
+  audio.play();
 }
 showQuestions();
